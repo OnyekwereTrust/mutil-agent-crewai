@@ -5,7 +5,7 @@ import os
 load_dotenv()
 
 
-#openai_key = os.getenv("OPENAI_API_KEY") -- remove comment
+openai_key = os.getenv("OPENAI_API_KEY")
 model = LLM(
     model="openai/gpt-4", # call model by provider/model_name
     temperature=0.8,
