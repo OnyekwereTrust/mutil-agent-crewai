@@ -5,7 +5,17 @@ import os
 load_dotenv()
 
 
-
+openai_key = os.getenv("OPENAI_API_KEY")
+model = LLM(
+    model="openai/gpt-4", # call model by provider/model_name
+    temperature=0.8,
+    max_tokens=150,
+    top_p=0.9,
+    frequency_penalty=0.1,
+    presence_penalty=0.1,
+    stop=["END"],
+    seed=42
+)
 
 marketer = Agent(
   role="Marketing Research Analyst",
